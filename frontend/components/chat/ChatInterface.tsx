@@ -1,20 +1,59 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { MessageList } from "./MessageList";
 import { MessageInput } from "./MessageInput";
+import { ChatSidebar } from "./ChatSidebar";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Trash2 } from "lucide-react";
 import { streamChatMessage, Message, ChatRequest } from "@/lib/api";
 import { cn } from "@/lib/utils";
+import {
+  Conversation,
+  saveConversation,
+  getConversation,
+} from "@/lib/conversation-storage";
 
 export function ChatInterface() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [sessionId, setSessionId] = useState<string | undefined>();
   const [currentAgentType, setCurrentAgentType] = useState<string | undefined>();
+  const [currentConversationId, setCurrentConversationId] = useState<string | undefined>();
+  const autoSaveTimeoutRef = useRef<NodeJS.Timeout>();
+
+  // Auto-save conversation after messages change
+  useEffect(() => {
+    if (messages.length === 0) return;
+
+    // Clear existing timeout
+    if (autoSaveTimeoutRef.current) {
+      clearTimeout(autoSaveTimeoutRef.current);
+    }
+
+    // Auto-save after 1 second of inactivity
+    autoSaveTimeoutRef.current = setTimeout(() => {
+      try {
+        const conversation = saveConversation({
+          id: currentConversationId,
+          title: "",
+          messages,
+          sessionId,
+        });
+        setCurrentConversationId(conversation.id);
+      } catch (error) {
+        console.error("Error auto-saving conversation:", error);
+      }
+    }, 1000);
+
+    return () => {
+      if (autoSaveTimeoutRef.current) {
+        clearTimeout(autoSaveTimeoutRef.current);
+      }
+    };
+  }, [messages, sessionId, currentConversationId]);
 
   const handleSend = useCallback(
     async (userMessage: string) => {
@@ -136,18 +175,39 @@ export function ChatInterface() {
     setMessages([]);
     setSessionId(undefined);
     setCurrentAgentType(undefined);
+    setCurrentConversationId(undefined);
+  };
+
+  const handleNewConversation = () => {
+    handleClear();
+  };
+
+  const handleSelectConversation = (conversation: Conversation) => {
+    setMessages(conversation.messages);
+    setSessionId(conversation.sessionId);
+    setCurrentConversationId(conversation.id);
+    setCurrentAgentType(undefined);
   };
 
   return (
-    <Card className={cn(
-      "flex flex-col w-full mx-auto",
-      "h-screen sm:h-[600px] md:min-h-[600px] md:max-h-[800px]",
-      "max-w-4xl",
-      "rounded-lg sm:rounded-xl",
-      "shadow-xl shadow-blue-100/50",
-      "border border-orange-200/60",
-      "bg-white"
-    )}>
+    <div className="flex h-[calc(100vh-2rem)] sm:h-[calc(100vh-4rem)] md:h-[calc(100vh-3rem)] w-full max-w-7xl mx-auto bg-white rounded-lg sm:rounded-xl shadow-xl shadow-blue-100/50 border border-orange-200/60 overflow-hidden">
+      {/* Sidebar */}
+      <div className="hidden md:flex w-64 shrink-0">
+        <ChatSidebar
+          currentConversationId={currentConversationId}
+          onSelectConversation={handleSelectConversation}
+          onNewConversation={handleNewConversation}
+        />
+      </div>
+
+      {/* Main Chat Area */}
+      <Card className={cn(
+        "flex flex-col flex-1",
+        "min-h-0",
+        "rounded-none sm:rounded-l-none",
+        "border-0 border-l border-orange-200/60",
+        "bg-white"
+      )}>
       <div className="flex items-center justify-between p-3 sm:p-4 border-b border-orange-200/60 bg-gradient-to-r from-blue-50/30 to-white">
         <div className="flex-1 min-w-0">
           <h1 className="text-lg sm:text-xl font-semibold truncate">
@@ -176,7 +236,8 @@ export function ChatInterface() {
         <MessageList messages={messages} isLoading={isLoading} />
       </div>
       <MessageInput onSend={handleSend} disabled={isLoading} />
-    </Card>
+      </Card>
+    </div>
   );
 }
 
