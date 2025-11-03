@@ -1,6 +1,7 @@
 """Pure CAG (Cached Augmented Generation) implementation for Policy agent."""
 
 import logging
+import re
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -57,7 +58,6 @@ class CAGRetriever:
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
                     # Remove metadata markers for cleaner content
-                    import re
                     cleaned_content = re.sub(r"#\w+:\s*.+\n", "", content)
                     documents.append(cleaned_content.strip())
                     logger.debug(f"Loaded document: {file_path.name}")
