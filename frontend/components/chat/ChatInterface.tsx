@@ -5,6 +5,7 @@ import { MessageList } from "./MessageList";
 import { MessageInput } from "./MessageInput";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Trash2 } from "lucide-react";
 import { streamChatMessage, Message, ChatRequest } from "@/lib/api";
 import { cn } from "@/lib/utils";
@@ -153,17 +154,20 @@ export function ChatInterface() {
             Ask about destinations, bookings, payments, or policies
           </p>
         </div>
-        {messages.length > 0 && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={handleClear}
-            className="shrink-0 ml-2"
-            aria-label="Clear conversation"
-          >
-            <Trash2 className="size-4" />
-          </Button>
-        )}
+        <div className="flex items-center gap-1 shrink-0 ml-2">
+          <ThemeToggle />
+          {messages.length > 0 && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={handleClear}
+              className="shrink-0"
+              aria-label="Clear conversation"
+            >
+              <Trash2 className="size-4" />
+            </Button>
+          )}
+        </div>
       </div>
       <div className="flex-1 overflow-hidden min-h-0">
         <MessageList messages={messages} isLoading={isLoading} />
