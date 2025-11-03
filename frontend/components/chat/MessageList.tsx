@@ -78,7 +78,7 @@ export function MessageList({ messages, isLoading = false }: MessageListProps) {
                     const event = new CustomEvent('suggestQuery', { detail: query.text });
                     window.dispatchEvent(event);
                   }}
-                  className="text-left text-sm p-3 rounded-lg border border-border hover:bg-accent hover:border-accent-foreground/20 transition-colors text-muted-foreground hover:text-foreground"
+                  className="text-left text-sm p-3 rounded-lg border border-orange-200/60 bg-white hover:bg-blue-50 hover:border-orange-300/70 transition-all shadow-sm hover:shadow-md text-foreground"
                 >
                   {query.text}
                 </button>
@@ -108,11 +108,12 @@ export function MessageList({ messages, isLoading = false }: MessageListProps) {
             >
               <Card
                 className={cn(
-                  "p-3 sm:p-4 transition-all hover:shadow-md",
+                  "p-3 sm:p-4 transition-all",
                   message.role === "user"
-                    ? "bg-primary text-primary-foreground max-w-[90%] sm:max-w-[80%]"
-                    : "bg-muted max-w-[90%] sm:max-w-[80%]",
-                  "rounded-2xl"
+                    ? "bg-primary text-primary-foreground max-w-[90%] sm:max-w-[80%] shadow-sm shadow-blue-200/30"
+                    : "bg-white max-w-[90%] sm:max-w-[80%] shadow-sm shadow-gray-200/50 border border-orange-200/50",
+                  "rounded-2xl",
+                  "hover:shadow-md hover:shadow-blue-100/40"
                 )}
               >
                 <div className="flex items-center justify-between gap-2 mb-2">
