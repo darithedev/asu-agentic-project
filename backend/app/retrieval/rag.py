@@ -28,7 +28,10 @@ class RAGRetriever:
             collection_name: Name of ChromaDB collection (defaults to config)
         """
         self.collection_name = collection_name or settings.chroma_collection_name
-        self.embeddings = OpenAIEmbeddings(model=settings.openai_embedding_model)
+        self.embeddings = OpenAIEmbeddings(
+            model=settings.openai_embedding_model,
+            openai_api_key=settings.openai_api_key
+        )
         
         # Initialize ChromaDB client
         db_path = settings.chroma_db_absolute_path

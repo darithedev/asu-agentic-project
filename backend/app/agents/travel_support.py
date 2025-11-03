@@ -30,6 +30,7 @@ class TravelSupportAgent:
         self.retriever = rag_retriever or RAGRetriever()
         self.llm = ChatOpenAI(
             model=settings.openai_model,
+            api_key=settings.openai_api_key,
             temperature=0.7,  # Higher temperature for more conversational responses
         )
         logger.info("Initialized Travel Support agent (Pure RAG)")
@@ -101,7 +102,14 @@ acknowledge this and provide the best answer you can with the available informat
             messages.append(HumanMessage(content=user_prompt))
 
             response = self.llm.invoke(messages)
-            return response.content.strip()
+            response_content = response.content.strip() if response.content else ""
+            
+            # Validate response is not empty
+            if not response_content:
+                logger.warning(f"Empty response from LLM for query: {query[:50]}...")
+                return "I apologize, but I couldn't generate a response. Please try again or contact customer support."
+            
+            return response_content
 
         except Exception as e:
             logger.error(f"Error generating response: {e}")
