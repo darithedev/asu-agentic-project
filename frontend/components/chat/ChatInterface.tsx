@@ -121,7 +121,7 @@ export function ChatInterface() {
         </p>
       </div>
       <div className="flex-1 overflow-hidden">
-        <MessageList messages={messages} />
+        <MessageList messages={messages} isLoading={isLoading} />
       </div>
       <MessageInput onSend={handleSend} disabled={isLoading} />
     </Card>
