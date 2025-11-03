@@ -23,26 +23,69 @@ export function ChatInterface() {
   const [currentAgentType, setCurrentAgentType] = useState<string | undefined>();
   const [currentConversationId, setCurrentConversationId] = useState<string | undefined>();
   const autoSaveTimeoutRef = useRef<NodeJS.Timeout>();
+  const currentConversationIdRef = useRef<string | undefined>();
+  const isLoadingConversationRef = useRef<boolean>(false);
+  
+  // Keep ref in sync with state
+  useEffect(() => {
+    currentConversationIdRef.current = currentConversationId;
+  }, [currentConversationId]);
 
   // Auto-save conversation after messages change
   useEffect(() => {
-    if (messages.length === 0) return;
+    // Don't auto-save if we're loading a conversation or if messages are empty
+    if (messages.length === 0 || isLoadingConversationRef.current) return;
+
+    // Don't auto-save if we don't have a conversation ID yet
+    if (!currentConversationIdRef.current) return;
 
     // Clear existing timeout
     if (autoSaveTimeoutRef.current) {
       clearTimeout(autoSaveTimeoutRef.current);
     }
 
+    // Capture the current conversation ID and messages at the time of scheduling
+    // Make a deep copy of messages to prevent reference sharing issues
+    // This prevents race conditions when switching conversations
+    const conversationIdToSave = currentConversationIdRef.current;
+    const messagesToSave = messages.map(msg => ({ ...msg }));
+    const sessionIdToSave = sessionId;
+
     // Auto-save after 1 second of inactivity
     autoSaveTimeoutRef.current = setTimeout(() => {
+      // Double-check that we're still saving the same conversation
+      // If the conversation changed, don't save
+      if (currentConversationIdRef.current !== conversationIdToSave) {
+        console.log(`Skipping auto-save: conversation changed from ${conversationIdToSave} to ${currentConversationIdRef.current}`);
+        return;
+      }
+
+      // Double-check that we're not loading a conversation
+      if (isLoadingConversationRef.current) {
+        console.log('Skipping auto-save: conversation is being loaded');
+        return;
+      }
+
+      // Verify we have messages to save
+      if (!messagesToSave || messagesToSave.length === 0) {
+        console.log('Skipping auto-save: no messages to save');
+        return;
+      }
+
       try {
+        console.log(`Auto-saving conversation ${conversationIdToSave} with ${messagesToSave.length} messages`);
         const conversation = saveConversation({
-          id: currentConversationId,
+          id: conversationIdToSave,
           title: "",
-          messages,
-          sessionId,
+          messages: messagesToSave,
+          sessionId: sessionIdToSave,
         });
-        setCurrentConversationId(conversation.id);
+        
+        // Only update if we're still on the same conversation
+        if (currentConversationIdRef.current === conversationIdToSave) {
+          setCurrentConversationId(conversation.id);
+          currentConversationIdRef.current = conversation.id;
+        }
       } catch (error) {
         console.error("Error auto-saving conversation:", error);
       }
@@ -122,6 +165,35 @@ export function ChatInterface() {
               setCurrentAgentType(agentType);
             }
             setIsLoading(false);
+            
+            // Cancel any pending auto-save since we're saving immediately after completion
+            // This prevents duplicate conversations from being created
+            if (autoSaveTimeoutRef.current) {
+              clearTimeout(autoSaveTimeoutRef.current);
+              autoSaveTimeoutRef.current = undefined;
+            }
+            
+            // Save conversation immediately after completion
+            // Use setTimeout to ensure state has updated
+            setTimeout(() => {
+              setMessages((currentMessages) => {
+                try {
+                  // Make a deep copy of messages to prevent reference sharing
+                  const messagesCopy = currentMessages.map(msg => ({ ...msg }));
+                  const conversation = saveConversation({
+                    id: currentConversationIdRef.current,
+                    title: "",
+                    messages: messagesCopy,
+                    sessionId: newSessionId,
+                  });
+                  setCurrentConversationId(conversation.id);
+                  currentConversationIdRef.current = conversation.id;
+                } catch (error) {
+                  console.error("Error saving conversation after completion:", error);
+                }
+                return currentMessages;
+              });
+            }, 200);
           },
           // onError: Handle errors
           (error: Error) => {
@@ -171,23 +243,95 @@ export function ChatInterface() {
     };
   }, [handleSend]);
 
-  const handleClear = () => {
+  const handleClear = useCallback(() => {
+    // Clear any pending auto-save to prevent it from saving the old conversation
+    if (autoSaveTimeoutRef.current) {
+      clearTimeout(autoSaveTimeoutRef.current);
+      autoSaveTimeoutRef.current = undefined;
+    }
+    
+    // Set loading flag to prevent auto-save from triggering
+    isLoadingConversationRef.current = true;
+    
     setMessages([]);
     setSessionId(undefined);
     setCurrentAgentType(undefined);
     setCurrentConversationId(undefined);
-  };
+    currentConversationIdRef.current = undefined;
+    
+    // Allow auto-save after a short delay to ensure state has settled
+    setTimeout(() => {
+      isLoadingConversationRef.current = false;
+    }, 500);
+  }, []);
 
-  const handleNewConversation = () => {
+  const handleNewConversation = useCallback(() => {
     handleClear();
-  };
+  }, [handleClear]);
 
-  const handleSelectConversation = (conversation: Conversation) => {
-    setMessages(conversation.messages);
-    setSessionId(conversation.sessionId);
-    setCurrentConversationId(conversation.id);
+  const handleSelectConversation = useCallback((conversation: Conversation) => {
+    // Don't reload if it's already the current conversation
+    if (currentConversationId === conversation.id) {
+      return;
+    }
+    
+    // Clear any pending auto-save
+    if (autoSaveTimeoutRef.current) {
+      clearTimeout(autoSaveTimeoutRef.current);
+    }
+    
+    // Set flag to prevent auto-save during load
+    isLoadingConversationRef.current = true;
+    
+    // Fetch the conversation fresh from storage to ensure we have the latest data
+    // This prevents issues with stale conversation objects from the sidebar
+    const freshConversation = getConversation(conversation.id);
+    
+    if (!freshConversation) {
+      console.error(`Conversation ${conversation.id} not found in storage`);
+      isLoadingConversationRef.current = false;
+      return;
+    }
+    
+    // Verify we're loading the correct conversation
+    if (freshConversation.id !== conversation.id) {
+      console.error(`Conversation ID mismatch: expected ${conversation.id}, got ${freshConversation.id}`);
+      isLoadingConversationRef.current = false;
+      return;
+    }
+    
+    // Load conversation messages (make a deep copy to avoid mutations)
+    // Ensure all messages have proper content (handle any missing or malformed data)
+    const messagesCopy = freshConversation.messages
+      .map(msg => ({
+        ...msg,
+        content: String(msg.content || ""), // Ensure content is always a string
+        role: msg.role || "user", // Ensure role is set
+        timestamp: msg.timestamp || new Date().toISOString(), // Ensure timestamp exists
+        agent_type: msg.agent_type, // Preserve agent_type if present
+      }))
+      .filter(msg => {
+        // Filter out completely invalid messages
+        return msg.role && (msg.content !== undefined && msg.content !== null);
+      });
+    
+    // Log first message content to verify we're loading the right conversation
+    const firstUserMsg = messagesCopy.find(m => m.role === "user");
+    console.log(`Loading conversation ${freshConversation.id} (title: "${freshConversation.title}") with ${messagesCopy.length} messages. First message: "${firstUserMsg?.content?.substring(0, 50) || 'none'}"`);
+    
+    // Set messages using a function to ensure we're setting the exact array
+    setMessages(() => messagesCopy);
+    setSessionId(freshConversation.sessionId);
+    setCurrentConversationId(freshConversation.id);
+    currentConversationIdRef.current = freshConversation.id;
     setCurrentAgentType(undefined);
-  };
+    
+    // Allow auto-save after a delay to ensure state has settled
+    // Use a longer timeout to prevent auto-save from triggering immediately after loading
+    setTimeout(() => {
+      isLoadingConversationRef.current = false;
+    }, 2000);
+  }, [currentConversationId]);
 
   return (
     <div className="flex h-[calc(100vh-2rem)] sm:h-[calc(100vh-4rem)] md:h-[calc(100vh-3rem)] w-full max-w-7xl mx-auto bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-xl shadow-blue-100/50 dark:shadow-black/50 border border-orange-200/60 dark:border-gray-700 overflow-hidden">

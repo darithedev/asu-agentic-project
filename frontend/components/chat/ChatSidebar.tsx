@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { Trash2, Plus } from "lucide-react";
@@ -25,25 +25,42 @@ export function ChatSidebar({
 }: ChatSidebarProps) {
   const [conversations, setConversations] = useState<Conversation[]>([]);
 
+  // Load conversations
+  const loadConversations = useCallback(() => {
+    requestAnimationFrame(() => {
+      const allConversations = getConversations();
+      setConversations(allConversations);
+    });
+  }, []);
+
   useEffect(() => {
-    // Load conversations on mount
-    setConversations(getConversations());
+    loadConversations();
 
     // Listen for storage changes (from other tabs/windows)
     const handleStorageChange = (e: StorageEvent) => {
       if (e.key === "travel_agency_conversations") {
-        setConversations(getConversations());
+        loadConversations();
       }
     };
 
+    // Listen for custom event (same tab updates)
+    const handleConversationsUpdated = () => {
+      loadConversations();
+    };
+
     window.addEventListener("storage", handleStorageChange);
-    return () => window.removeEventListener("storage", handleStorageChange);
-  }, []);
+    window.addEventListener("conversationsUpdated", handleConversationsUpdated);
+    
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("conversationsUpdated", handleConversationsUpdated);
+    };
+  }, [loadConversations]);
 
   // Refresh conversations when they might have changed
-  const refreshConversations = () => {
-    setConversations(getConversations());
-  };
+  const refreshConversations = useCallback(() => {
+    loadConversations();
+  }, [loadConversations]);
 
   const handleDelete = (e: React.MouseEvent, id: string) => {
     e.stopPropagation();
@@ -103,11 +120,13 @@ export function ChatSidebar({
             </div>
           ) : (
             <div className="space-y-1">
-              {conversations.map((conversation) => {
+              {conversations.map((conversation, index) => {
                 const isActive = conversation.id === currentConversationId;
+                // Ensure unique key - ID should always be present, but fallback for safety
+                const uniqueKey = conversation.id || `conv-${index}-${conversation.createdAt || Date.now()}`;
                 return (
                   <div
-                    key={conversation.id}
+                    key={uniqueKey}
                     className={cn(
                       "group relative rounded-lg transition-all",
                       isActive
@@ -116,21 +135,26 @@ export function ChatSidebar({
                     )}
                   >
                     <button
-                      onClick={() => onSelectConversation(conversation)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        onSelectConversation(conversation);
+                      }}
                       className={cn(
                         "w-full text-left p-3 rounded-lg transition-all",
-                        "flex items-center justify-between gap-2",
+                        "flex items-start justify-between gap-2",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1"
                       )}
                     >
                       <span
                         className={cn(
-                          "text-sm truncate flex-1",
+                          "text-sm flex-1 min-w-0 break-words line-clamp-2 leading-relaxed",
                           isActive ? "text-primary-foreground font-medium" : "text-foreground"
                         )}
                         title={conversation.title}
+                        style={{ wordBreak: 'break-word', overflowWrap: 'break-word' }}
                       >
-                        {conversation.title}
+                        {conversation.title || "New Chat"}
                       </span>
                       {isActive && (
                         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-primary-foreground border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent"></div>

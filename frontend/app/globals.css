@@ -298,3 +298,15 @@ html {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
+/* Line clamp utility support */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
