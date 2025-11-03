@@ -5,6 +5,8 @@ This script loads documents from mock data directories, chunks them appropriatel
 generates embeddings, and stores them in ChromaDB with metadata for filtering.
 """
 
+import argparse
+import hashlib
 import logging
 import os
 import re
@@ -39,6 +41,13 @@ class DocumentIngester:
             db_path: Path to ChromaDB persistent storage
             collection_name: Name of the ChromaDB collection
         """
+        # Validate OpenAI API key is set
+        if not os.getenv("OPENAI_API_KEY"):
+            raise ValueError(
+                "OPENAI_API_KEY environment variable is required. "
+                "Please set it in your .env file or environment."
+            )
+        
         self.db_path = Path(db_path)
         self.collection_name = collection_name
         self.embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
@@ -60,7 +69,7 @@ class DocumentIngester:
             )
             logger.info(f"Created new collection: {collection_name}")
 
-    def parse_metadata(self, content: str) -> Dict[str, str]:
+    def parse_metadata(self, content: str) -> Tuple[Dict[str, str], str]:
         """
         Parse metadata markers from document content.
 
@@ -68,7 +77,7 @@ class DocumentIngester:
             content: Document content with metadata markers
 
         Returns:
-            Dictionary of metadata key-value pairs
+            Tuple of (metadata dictionary, cleaned content string)
         """
         metadata = {}
         # Look for metadata markers like #agent_type: value
@@ -243,8 +252,15 @@ class DocumentIngester:
             # Prepare batch data
             texts = [doc[0] for doc in batch]
             metadatas = [doc[1] for doc in batch]
-            ids = [f"{metadata['agent_type']}_{metadata['source_file']}_{metadata['chunk_index']}_{i+j}" 
-                   for j, metadata in enumerate(metadatas)]
+            
+            # Generate reliable IDs using hash to avoid conflicts and special character issues
+            ids = []
+            for j, (text, metadata) in enumerate(batch):
+                # Create a hash-based ID from agent_type, source_file, chunk_index, and batch info
+                id_string = f"{metadata.get('agent_type', 'unknown')}_{metadata.get('source_file', 'unknown')}_{metadata.get('chunk_index', j)}_{i+j}"
+                # Use hash to sanitize and ensure uniqueness
+                id_hash = hashlib.md5(id_string.encode('utf-8')).hexdigest()[:16]
+                ids.append(f"{metadata.get('agent_type', 'unknown')}_{id_hash}")
 
             try:
                 # Generate embeddings
@@ -282,6 +298,22 @@ class DocumentIngester:
 
 def main():
     """Main entry point for data ingestion."""
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(
+        description="Ingest travel agency documents into ChromaDB"
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Automatically clear existing collection and re-ingest without prompting",
+    )
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip ingestion if collection already contains documents",
+    )
+    args = parser.parse_args()
+
     # Get paths from environment or use defaults
     backend_dir = Path(__file__).parent.parent
     data_dir = backend_dir / "data" / "mock_data"
@@ -307,16 +339,32 @@ def main():
         collection_name=collection_name
     )
 
-    # Check if collection has data and prompt user
+    # Check if collection has data and handle accordingly
     collection_count = ingester.collection.count()
     if collection_count > 0:
         logger.info(f"Collection already contains {collection_count} documents.")
-        response = input("Do you want to clear and re-ingest? (yes/no): ")
-        if response.lower() == "yes":
+        
+        if args.force:
+            logger.info("--force flag set: clearing existing collection and re-ingesting...")
             ingester.clear_collection()
-        else:
-            logger.info("Keeping existing data. Exiting.")
+        elif args.skip_existing:
+            logger.info("--skip-existing flag set: keeping existing data. Exiting.")
             return
+        else:
+            # Interactive prompt only if no flags provided
+            try:
+                response = input("Do you want to clear and re-ingest? (yes/no): ")
+                if response.lower() == "yes":
+                    ingester.clear_collection()
+                else:
+                    logger.info("Keeping existing data. Exiting.")
+                    return
+            except (EOFError, KeyboardInterrupt):
+                # Handle non-interactive environments (e.g., CI/CD)
+                logger.warning(
+                    "Non-interactive environment detected. Use --force or --skip-existing flags."
+                )
+                return
 
     # Ingest documents
     ingester.ingest_documents(data_dir)
