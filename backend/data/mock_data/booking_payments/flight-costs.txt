@@ -1,0 +1,57 @@
+#agent_type: booking_payments
+#document_type: pricing_info
+#last_updated: 2024-01-14
+
+FLIGHT COST REFERENCE GUIDE
+
+Approximate flight pricing for popular routes (economy class, round-trip, per person).
+
+DOMESTIC (USA)
+- New York to Los Angeles: $300-600
+- New York to Miami: $200-400
+- Chicago to San Francisco: $350-650
+- Boston to Las Vegas: $350-600
+
+Prices vary significantly by:
+- Booking timing (book 2-3 months ahead for best rates)
+- Travel dates (weekends, holidays more expensive)
+- Season (summer and holidays peak pricing)
+
+EUROPE
+- New York to Paris: $600-1,200
+- New York to London: $550-1,100
+- Los Angeles to Rome: $800-1,400
+- Miami to Madrid: $700-1,300
+
+Peak season (June-August): Expect prices at higher end of range.
+
+ASIA
+- Los Angeles to Tokyo: $800-1,500
+- San Francisco to Bangkok: $900-1,600
+- New York to Singapore: $1,100-1,800
+- Chicago to Seoul: $950-1,700
+
+CARIBBEAN AND MEXICO
+- New York to Cancun: $400-800
+- Miami to Jamaica: $350-700
+- Atlanta to Dominican Republic: $400-750
+
+BUSINESS CLASS PREMIUM
+Generally 3-5x economy pricing:
+- Domestic: +$800-2,000
+- Europe: +$2,000-4,000
+- Asia: +$3,000-6,000
+
+BAGGAGE FEES
+- First checked bag: $35-50 (domestic), $50-75 (international)
+- Second checked bag: $45-60 (domestic), $75-100 (international)
+- Overweight bags (>50 lbs): $100-200
+- Oversized bags: $100-200
+
+SEAT SELECTION
+- Standard seat: Free or $0-25
+- Preferred seat (extra legroom): $25-75
+- Exit row: $50-150
+
+Prices shown are approximate and fluctuate daily based on demand, fuel costs, and airline pricing strategies. Book early for best rates, especially during peak travel periods.
+

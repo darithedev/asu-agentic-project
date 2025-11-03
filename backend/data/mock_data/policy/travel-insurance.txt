@@ -1,0 +1,108 @@
+#agent_type: policy
+#document_type: insurance_policy
+#last_updated: 2024-01-12
+#effective_date: 2024-01-01
+
+TRAVEL INSURANCE POLICY
+
+COVERAGE OVERVIEW
+
+Our travel insurance plans provide comprehensive protection for your trip investment and peace of mind.
+
+COVERED EVENTS
+
+Trip Cancellation:
+- Covered reasons include: illness, injury, death of traveler or family member, severe weather, job loss, jury duty
+- Reimbursement up to trip cost
+
+Trip Interruption:
+- If you must cut your trip short due to covered events
+- Reimbursement for unused, prepaid, non-refundable expenses
+
+Trip Delay:
+- Coverage if trip is delayed 6+ hours due to covered reasons
+- Reimbursement for additional accommodation/meal expenses (typically $100-200 per day, up to limit)
+
+Medical Emergency:
+- Emergency medical coverage while traveling
+- Medical evacuation coverage
+- Coverage amounts vary by plan (typically $50,000-250,000)
+
+Baggage Loss/Damage:
+- Coverage for lost, stolen, or damaged baggage
+- Typically $500-2,500 per person
+- Does not cover high-value items unless declared
+
+EXCLUSIONS
+
+Not covered:
+- Pre-existing medical conditions (unless waiver purchased)
+- Known events at time of booking (hurricanes, political unrest you were aware of)
+- Alcohol/drug-related incidents
+- Extreme sports or dangerous activities (unless specified coverage added)
+- War, terrorism (may be available as separate add-on)
+- Mental health conditions (unless specified)
+
+PLAN TYPES
+
+Basic Plan:
+- Trip cancellation/interruption: Up to trip cost
+- Medical: $50,000
+- Baggage: $500
+- Trip delay: $100/day
+
+Standard Plan:
+- Trip cancellation/interruption: Up to trip cost
+- Medical: $100,000
+- Baggage: $1,000
+- Trip delay: $150/day
+
+Premium Plan:
+- Trip cancellation/interruption: Up to trip cost + 150%
+- Medical: $250,000
+- Baggage: $2,500
+- Trip delay: $200/day
+- Cancel for Any Reason option available
+
+PRICING
+
+Insurance premiums typically range from:
+- 4-8% of total trip cost for Basic/Standard
+- 10-15% of total trip cost for Premium
+
+Exact pricing calculated at time of booking based on trip details.
+
+CLAIMS PROCESS
+
+To file a claim:
+1. Contact insurance provider immediately when incident occurs
+2. Obtain all documentation (receipts, medical records, police reports)
+3. Complete claim form (available online or by request)
+4. Submit with supporting documentation
+5. Claims typically processed within 10-30 business days
+
+PRE-EXISTING CONDITIONS
+
+Pre-existing conditions may be covered if:
+- Insurance purchased within 14-21 days of initial trip deposit
+- Waiver purchased (additional fee may apply)
+- Condition stable for specified period before travel
+
+Review policy details for specific requirements.
+
+PURCHASE TIMING
+
+Insurance must be purchased:
+- Before final payment (typically 30 days before travel)
+- Some benefits require purchase within 14-21 days of initial booking deposit
+
+We strongly recommend purchasing insurance at time of booking for maximum coverage.
+
+QUESTIONS
+
+Contact insurance department:
+Email: insurance@travelagency.com
+Phone: 1-800-XXX-XXXX
+
+Insurance provided by licensed third-party provider. Policy terms and conditions vary by provider. Review full policy documents before purchase.
+

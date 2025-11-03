@@ -1,0 +1,105 @@
+#agent_type: policy
+#document_type: terms_of_service
+#last_updated: 2024-01-10
+#effective_date: 2024-01-01
+
+TERMS OF SERVICE
+
+AGREEMENT TO TERMS
+
+By using our travel booking services, you agree to be bound by these Terms of Service. Please read these terms carefully.
+
+SERVICES PROVIDED
+
+We act as an intermediary between you and travel service providers (airlines, hotels, tour operators). We facilitate bookings but are not directly responsible for the services provided by third-party suppliers.
+
+BOOKING RESPONSIBILITIES
+
+Customer Responsibilities:
+- Provide accurate personal information (name matching passport/ID)
+- Ensure passport validity (minimum 6 months for international travel)
+- Obtain required visas and travel documents
+- Arrive at airports/terminals on time
+- Comply with destination country laws and regulations
+- Review all booking details for accuracy
+
+Travel Agency Responsibilities:
+- Process bookings accurately
+- Provide booking confirmations
+- Notify customers of significant changes
+- Assist with modifications when possible
+- Process refunds per cancellation policy
+
+PRICING AND PAYMENTS
+
+- Prices are subject to change until booking is confirmed
+- Final pricing confirmed at time of booking
+- Payment required per payment schedule (typically 30 days before travel)
+- Failure to pay may result in booking cancellation
+- All prices in USD unless otherwise stated
+
+CHANGES AND MODIFICATIONS
+
+Modifications to bookings:
+- Subject to availability
+- May incur change fees
+- Airline change fees: $200-500 per person (varies by airline and fare type)
+- Hotel changes: Subject to property cancellation policy
+- Changes must be requested through us, not directly with suppliers
+
+TRAVEL DOCUMENTATION
+
+You are responsible for:
+- Valid passport
+- Required visas
+- Vaccination certificates (where required)
+- Travel insurance documentation
+- Any other documents required by destination
+
+We are not responsible for denied entry due to missing or invalid documents.
+
+TRAVEL INSURANCE
+
+We strongly recommend comprehensive travel insurance. Travel insurance is not included in base package prices unless explicitly stated. You may purchase insurance through us or independently.
+
+LIMITATION OF LIABILITY
+
+Our liability is limited to the cost of the booking. We are not liable for:
+- Acts of third-party service providers
+- Natural disasters, political unrest, or other force majeure events
+- Loss or damage to personal property
+- Personal injury or illness
+- Travel delays or cancellations by airlines/hotels
+
+FORCE MAJEURE
+
+We are not responsible for cancellations or changes due to events beyond our control including but not limited to:
+- Natural disasters
+- War, terrorism, political unrest
+- Pandemics or health emergencies
+- Government travel restrictions
+- Airline or hotel operational issues
+
+INTELLECTUAL PROPERTY
+
+All content on our website and materials are our property and protected by copyright. Use of our content without permission is prohibited.
+
+DISPUTE RESOLUTION
+
+Disputes will be resolved through:
+1. Direct communication with customer service
+2. Formal complaint process
+3. Binding arbitration if necessary
+
+GOVERNING LAW
+
+These terms are governed by the laws of [Your State/Country]. Any legal disputes will be resolved in courts of [Your Jurisdiction].
+
+ACCEPTANCE
+
+By completing a booking, you acknowledge you have read, understood, and agree to these Terms of Service.
+
+Contact us with questions: legal@travelagency.com
+
+These terms may be updated. Current version always available on our website.
+

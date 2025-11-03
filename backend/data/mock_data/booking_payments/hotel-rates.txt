@@ -1,0 +1,75 @@
+#agent_type: booking_payments
+#document_type: pricing_info
+#last_updated: 2024-01-13
+
+HOTEL RATE GUIDE
+
+Average nightly rates per room (USD) for various destinations and hotel categories.
+
+PARIS, FRANCE
+- Budget (2-star): $80-120 per night
+- Mid-range (3-star): $150-250 per night
+- Upscale (4-star): $250-400 per night
+- Luxury (5-star): $400-800+ per night
+
+Peak season (summer): +30-50%
+
+LONDON, UK
+- Budget (2-star): $100-140 per night
+- Mid-range (3-star): $180-280 per night
+- Upscale (4-star): $300-500 per night
+- Luxury (5-star): $500-1,000+ per night
+
+TOKYO, JAPAN
+- Business hotel (3-star): $120-200 per night
+- Mid-range (4-star): $200-350 per night
+- Upscale (5-star): $400-800 per night
+
+Note: Rooms are typically smaller than Western standards.
+
+NEW YORK CITY, USA
+- Budget (2-star): $150-200 per night
+- Mid-range (3-star): $200-350 per night
+- Upscale (4-star): $350-600 per night
+- Luxury (5-star): $600-1,500+ per night
+
+Manhattan locations command premium pricing.
+
+BANGKOK, THAILAND
+- Budget (3-star): $40-80 per night
+- Mid-range (4-star): $80-150 per night
+- Upscale (5-star): $150-400 per night
+
+Excellent value destination.
+
+CANCELLATION POLICIES
+- Non-refundable: Up to 20% discount, no cancellation
+- Free cancellation: Can cancel up to 24-48 hours before arrival
+- Flexible: Can modify dates with advance notice
+
+EXTRA CHARGES
+- City taxes: $2-20 per night (varies by city)
+- Resort fees: $20-50 per night (some destinations)
+- Early check-in: $50-100 (if available)
+- Late check-out: $50-100 (if available)
+
+INCLUSIONS
+Standard inclusions:
+- Room accommodation
+- Basic toiletries
+- Daily housekeeping
+- Wi-Fi (sometimes free, sometimes paid)
+
+May include:
+- Breakfast (check package details)
+- Airport transfers (premium packages)
+- Access to hotel amenities
+
+All rates are approximate and vary by:
+- Season and holidays
+- Day of week (weekends often more expensive)
+- Special events (conferences, festivals)
+- Booking timing (last minute often higher)
+
+Rates confirmed at time of booking. Prices in local currency may vary.
+

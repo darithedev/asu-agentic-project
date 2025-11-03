@@ -1,0 +1,52 @@
+#agent_type: travel_support
+#document_type: itinerary_example
+#destination: Europe (Paris, Amsterdam, Berlin)
+#duration: 7 days
+#last_updated: 2024-01-12
+
+7-DAY EUROPEAN ADVENTURE ITINERARY
+
+This sample itinerary covers three major European cities in one week.
+
+DAY 1: PARIS
+- Morning: Arrival at CDG airport, check into hotel in central Paris
+- Afternoon: Visit the Eiffel Tower (book tickets in advance)
+- Evening: Stroll along the Seine River, dinner in a traditional bistro
+
+DAY 2: PARIS
+- Morning: Louvre Museum (opens at 9am, arrive early)
+- Afternoon: Walk through Tuileries Garden, visit Place de la Concorde
+- Evening: Montmartre neighborhood, dinner with view of city
+
+DAY 3: PARIS TO AMSTERDAM
+- Morning: Take high-speed train from Gare du Nord (approx 3.5 hours)
+- Afternoon: Arrive Amsterdam, check in, explore Jordaan district
+- Evening: Canal cruise (best views of city)
+
+DAY 4: AMSTERDAM
+- Morning: Van Gogh Museum (pre-book tickets)
+- Afternoon: Anne Frank House (book months in advance) or Rijksmuseum
+- Evening: Explore De Pijp neighborhood, local dining
+
+DAY 5: AMSTERDAM TO BERLIN
+- Morning: Flight from Amsterdam to Berlin (1.5 hours) or train (6 hours)
+- Afternoon: Check in Berlin hotel, visit Brandenburg Gate
+- Evening: Experience Berlin nightlife in Kreuzberg district
+
+DAY 6: BERLIN
+- Morning: Berlin Wall Memorial and Checkpoint Charlie
+- Afternoon: Museum Island (Pergamon Museum, Berlin Cathedral)
+- Evening: Traditional German dinner, sample local beers
+
+DAY 7: BERLIN DEPARTURE
+- Morning: Visit Reichstag Building (free but requires advance booking)
+- Afternoon: Final shopping, head to airport for departure
+
+TIPS FOR THIS ITINERARY
+- Purchase a Eurail pass if traveling by train
+- Book accommodations near city centers for easy access
+- Reserve major attractions 2-4 weeks in advance
+- Pack comfortable walking shoes
+- Allow buffer time between activities
+- Consider travel insurance for multi-city trip
+

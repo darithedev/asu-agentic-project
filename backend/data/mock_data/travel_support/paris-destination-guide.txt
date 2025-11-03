@@ -1,0 +1,32 @@
+#agent_type: travel_support
+#document_type: destination_guide
+#destination: Paris, France
+#last_updated: 2024-01-15
+
+PARIS DESTINATION GUIDE
+
+Paris, the City of Light, is one of the most visited cities in the world. This comprehensive guide will help you make the most of your visit.
+
+BEST TIME TO VISIT
+The best time to visit Paris is during spring (April to June) or fall (September to November) when the weather is mild and crowds are smaller. Summer (July-August) is peak tourist season with higher prices and larger crowds, but longer daylight hours for sightseeing.
+
+MUST-SEE ATTRACTIONS
+1. Eiffel Tower: Iconic symbol of Paris. Book tickets in advance to avoid long queues. Evening visits offer spectacular city views.
+2. Louvre Museum: Home to the Mona Lisa and thousands of other artworks. Plan at least 4-5 hours. Closed on Tuesdays.
+3. Notre-Dame Cathedral: Currently under restoration after 2019 fire, but exterior viewing is still impressive.
+4. Montmartre and Sacré-Cœur: Historic hilltop neighborhood with stunning basilica views.
+5. Champs-Élysées and Arc de Triomphe: Famous shopping avenue leading to the historic arch.
+6. Versailles Palace: 30-minute train ride from Paris. Allow a full day for this magnificent palace and gardens.
+
+GETTING AROUND
+The Paris Metro is efficient and affordable. Purchase a Navigo card or use contactless payment. Walking is also enjoyable in many neighborhoods. Taxis and rideshares are available but can be expensive during rush hour.
+
+ACCOMMODATION TIPS
+Staying in central arrondissements (1st-8th) is convenient but more expensive. Consider staying in the 11th or 12th arrondissements for better value while remaining close to attractions. Book accommodations well in advance, especially during peak season.
+
+FOOD AND DINING
+Paris is a culinary paradise. Try local boulangeries for fresh pastries, visit outdoor markets, and don't miss classic French bistros. Reservations are recommended for popular restaurants. Street crepes are an affordable and delicious option.
+
+LANGUAGE
+While many Parisians speak English, learning a few basic French phrases (bonjour, merci, s'il vous plaît) is appreciated and will enhance your experience.
+

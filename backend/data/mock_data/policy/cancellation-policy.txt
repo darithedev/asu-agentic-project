@@ -1,0 +1,70 @@
+#agent_type: policy
+#document_type: cancellation_policy
+#last_updated: 2024-01-15
+#effective_date: 2024-01-01
+
+CANCELLATION POLICY
+
+This policy outlines the terms and conditions for cancelling your travel booking.
+
+CANCELLATION TIME FRAMES
+
+Full Refund Eligibility:
+- Cancellations made 60+ days before departure: Full refund minus $100 processing fee per person
+- Cancellations made 45-59 days before departure: 75% refund
+- Cancellations made 30-44 days before departure: 50% refund
+- Cancellations made 15-29 days before departure: 25% refund
+- Cancellations made 0-14 days before departure: No refund
+
+EXCEPTIONS
+
+Non-Refundable Bookings:
+- Bookings marked as "Non-Refundable" or "Basic Economy" cannot be cancelled for refund
+- Non-refundable bookings may be eligible for future travel credit (see below)
+
+SPECIAL CIRCUMSTANCES
+
+Medical Emergencies:
+Documented medical emergencies preventing travel may qualify for full or partial refund. Medical documentation required. Case reviewed on individual basis.
+
+Death in Family:
+Full refund available with proper documentation (death certificate).
+
+Natural Disasters/Travel Bans:
+If destination becomes unsafe or inaccessible due to government travel bans or natural disasters, full refund or future credit offered.
+
+HOW TO CANCEL
+
+1. Online: Log into your account on our website, navigate to "My Bookings," select booking, click "Cancel"
+2. Phone: Call 1-800-XXX-XXXX during business hours
+3. Email: Send cancellation request to cancellations@travelagency.com
+
+Cancellation is effective when we confirm receipt. Processing time: 5-10 business days for refund processing.
+
+REFUND PROCESSING
+
+Refunds processed to original payment method:
+- Credit/Debit cards: 5-10 business days
+- PayPal: 3-5 business days
+- Wire transfers: 7-14 business days
+
+FUTURE TRAVEL CREDITS
+
+For cancellations not eligible for refund:
+- Future travel credit may be issued (typically 80% of booking value)
+- Credit valid for 12 months from issue date
+- Can be applied to any future booking
+- Credit is non-transferable
+
+GROUP BOOKINGS
+
+Group bookings (8+ people) may have separate cancellation terms outlined in group contract.
+
+QUESTIONS
+
+Contact us for cancellation requests or questions:
+Email: cancellations@travelagency.com
+Phone: 1-800-XXX-XXXX
+
+This policy applies to bookings made on or after January 1, 2024. Bookings made prior to this date are subject to terms in effect at time of booking.
+
