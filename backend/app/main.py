@@ -123,16 +123,37 @@ async def stream_response(
         result = graph.invoke(initial_state)
         
         # Get response from state
-        response_text = result.get("response", "I apologize, but I couldn't generate a response.")
+        response_text = result.get("response")
         
-        # Stream response token by token (simulated streaming)
-        # In a real implementation, you'd use LangGraph's streaming capabilities
+        # Debug logging
+        logger.info(f"Response from graph: {response_text[:100] if response_text else 'None'}...")
+        
+        # Handle empty or None response
+        if not response_text or not response_text.strip():
+            logger.warning(f"Empty response from graph for query: {query[:50]}...")
+            response_text = "I apologize, but I couldn't generate a response. Please try again."
+        
+        # Stream response token by token in SSE format
+        # Frontend expects Server-Sent Events format with "data: " prefix
+        # Frontend accumulates chunks directly, so we need to include spaces
         tokens = response_text.split()
-        for i, token in enumerate(tokens):
-            if i == 0:
-                yield token
-            else:
-                yield " " + token
+        
+        logger.info(f"Streaming {len(tokens)} tokens in SSE format")
+        
+        # Handle case where response might be empty after splitting
+        if not tokens:
+            error_message = "I apologize, but I couldn't generate a response. Please try again."
+            yield f"data: {error_message}\n\n"
+        else:
+            # Send each token as an SSE event with proper spacing
+            # Frontend accumulates chunks directly, so spaces must be included
+            for i, token in enumerate(tokens):
+                if i == 0:
+                    # First token: no leading space
+                    yield f"data: {token}\n\n"
+                else:
+                    # Subsequent tokens: include leading space for proper word separation
+                    yield f"data:  {token}\n\n"  # Note: space after colon for spacing
             
             # Small delay for streaming effect (remove in production for faster response)
             # await asyncio.sleep(0.01)
@@ -144,7 +165,8 @@ async def stream_response(
         
     except Exception as e:
         logger.error(f"Error in stream_response: {e}")
-        yield f"Error: {str(e)}"
+        error_message = f"Error: {str(e)}"
+        yield f"data: {error_message}\n\n"
 
 
 @app.get("/")
@@ -195,7 +217,12 @@ async def chat_endpoint(request: ChatRequest):
         result = graph.invoke(initial_state)
         
         # Get response
-        response_text = result.get("response", "I apologize, but I couldn't generate a response.")
+        response_text = result.get("response")
+        
+        # Handle empty or None response
+        if not response_text or not response_text.strip():
+            logger.warning(f"Empty response from graph for query: {request.message[:50]}...")
+            response_text = "I apologize, but I couldn't generate a response. Please try again."
         
         # Get agent type that handled the request
         agent_type = result.get("current_agent")
