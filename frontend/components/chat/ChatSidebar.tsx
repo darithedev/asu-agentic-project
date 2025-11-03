@@ -64,8 +64,8 @@ export function ChatSidebar({
   };
 
   return (
-    <div className="flex flex-col h-full bg-white border-r border-orange-200/60 overflow-hidden">
-      <div className="p-4 border-b border-orange-200/60">
+    <div className="flex flex-col h-full bg-white dark:bg-gray-900 border-r border-orange-200/60 dark:border-gray-700 overflow-hidden">
+      <div className="p-4 border-b border-orange-200/60 dark:border-gray-700">
         <div className="flex items-center justify-between mb-3">
           <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
             Chats

@@ -59,7 +59,7 @@ export function MessageInput({ onSend, disabled = false }: MessageInputProps) {
   };
 
   return (
-    <div className="flex gap-2 p-3 sm:p-4 border-t border-orange-200/60 bg-white">
+    <div className="flex gap-2 p-3 sm:p-4 border-t border-orange-200/60 dark:border-gray-700 bg-white dark:bg-gray-900">
       <div className="flex-1 relative">
         <textarea
           ref={textareaRef}
@@ -70,7 +70,7 @@ export function MessageInput({ onSend, disabled = false }: MessageInputProps) {
           disabled={disabled}
           rows={1}
           className={cn(
-            "w-full resize-none rounded-lg border border-orange-200/60 bg-white px-3 py-2 text-sm",
+            "w-full resize-none rounded-lg border border-orange-200/60 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2 text-sm dark:text-gray-100",
             "placeholder:text-muted-foreground",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 focus-visible:border-primary/50",
             "disabled:cursor-not-allowed disabled:opacity-50 disabled:bg-muted",

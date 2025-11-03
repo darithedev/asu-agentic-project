@@ -190,7 +190,7 @@ export function ChatInterface() {
   };
 
   return (
-    <div className="flex h-[calc(100vh-2rem)] sm:h-[calc(100vh-4rem)] md:h-[calc(100vh-3rem)] w-full max-w-7xl mx-auto bg-white rounded-lg sm:rounded-xl shadow-xl shadow-blue-100/50 border border-orange-200/60 overflow-hidden">
+    <div className="flex h-[calc(100vh-2rem)] sm:h-[calc(100vh-4rem)] md:h-[calc(100vh-3rem)] w-full max-w-7xl mx-auto bg-white dark:bg-gray-900 rounded-lg sm:rounded-xl shadow-xl shadow-blue-100/50 dark:shadow-black/50 border border-orange-200/60 dark:border-gray-700 overflow-hidden">
       {/* Sidebar */}
       <div className="hidden md:flex w-64 shrink-0">
         <ChatSidebar
@@ -205,10 +205,10 @@ export function ChatInterface() {
         "flex flex-col flex-1",
         "min-h-0",
         "rounded-none sm:rounded-l-none",
-        "border-0 border-l border-orange-200/60",
-        "bg-white"
+        "border-0 border-l border-orange-200/60 dark:border-gray-700",
+        "bg-white dark:bg-gray-900"
       )}>
-      <div className="flex items-center justify-between p-3 sm:p-4 border-b border-orange-200/60 bg-gradient-to-r from-blue-50/30 to-white">
+      <div className="flex items-center justify-between p-3 sm:p-4 border-b border-orange-200/60 dark:border-gray-700 bg-gradient-to-r from-blue-50/30 to-white dark:from-gray-800 dark:to-gray-900">
         <div className="flex-1 min-w-0">
           <h1 className="text-lg sm:text-xl font-semibold truncate">
             Travel Agency Customer Service
