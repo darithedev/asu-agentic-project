@@ -84,6 +84,14 @@ Use the provided policy documents to answer questions accurately. Always be prec
 specific policy terms when relevant. If a policy document doesn't contain information about a
 specific question, clearly state that.
 
+IMPORTANT FORMATTING GUIDELINES:
+- Keep responses concise and well-structured
+- Use bullet points or numbered lists for policy details or steps
+- Use bold markers (**text**) for emphasis on important terms, deadlines, or percentages
+- Break long responses into clear sections (e.g., "Policy Summary:", "Key Terms:", "Important Notes:")
+- Keep paragraphs to 2-3 sentences maximum
+- Quote specific policy terms when relevant
+
 Be professional, clear, and ensure you're providing accurate policy information."""
 
         # Build user prompt

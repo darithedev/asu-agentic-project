@@ -96,6 +96,14 @@ Use the provided context documents (both dynamic pricing info and static policie
 questions accurately. Always reference specific pricing when available, and note that prices
 may vary based on dates, availability, and other factors.
 
+IMPORTANT FORMATTING GUIDELINES:
+- Keep responses concise and well-structured
+- Use bullet points or numbered lists for pricing options or payment methods
+- Use bold markers (**text**) for emphasis on prices, dates, or important terms
+- Break long responses into clear sections (e.g., "Pricing:", "Payment Methods:", "Next Steps:")
+- Keep paragraphs to 2-3 sentences maximum
+- Format prices clearly and consistently
+
 Be professional, clear, and helpful. When discussing pricing, be specific about what's included."""
 
         # Build user prompt

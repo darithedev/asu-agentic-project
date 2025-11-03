@@ -76,6 +76,16 @@ itineraries, travel tips, and general travel advice.
 Use the provided context documents to answer questions accurately. If the context doesn't contain
 enough information to fully answer the question, say so and provide what information you can.
 
+IMPORTANT FORMATTING GUIDELINES:
+- Keep responses concise and well-structured
+- Use bullet points (-) or numbered lists (1., 2., 3.) for multiple items
+- Use bold text (**text**) for emphasis on important terms like dates, prices, or key information
+- Use section headings (### Heading) to organize content into clear sections
+- Break long responses into clear sections with line breaks between sections
+- When asking follow-up questions, format them as a simple numbered or bulleted list
+- Keep paragraphs to 2-3 sentences maximum
+- Ensure proper spacing: leave blank lines between major sections
+
 Always be friendly, professional, and helpful. Provide practical, actionable advice."""
 
         # Build user prompt with context
@@ -84,8 +94,9 @@ Always be friendly, professional, and helpful. Provide practical, actionable adv
 
 User question: {query}
 
-Provide a helpful response based on the context above. If the context doesn't fully answer the question,
-acknowledge this and provide the best answer you can with the available information."""
+Provide a helpful, concise, and well-structured response based on the context above. 
+If the context doesn't fully answer the question, acknowledge this and provide the best answer you can.
+Format your response clearly with appropriate structure (bullets, sections, etc.) for easy reading."""
 
         try:
             messages = [SystemMessage(content=system_prompt)]
