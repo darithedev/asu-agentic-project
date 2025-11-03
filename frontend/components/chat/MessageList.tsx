@@ -78,7 +78,7 @@ export function MessageList({ messages, isLoading = false }: MessageListProps) {
                     const event = new CustomEvent('suggestQuery', { detail: query.text });
                     window.dispatchEvent(event);
                   }}
-                  className="text-left text-sm p-3 rounded-lg border border-orange-200/60 bg-white hover:bg-blue-50 hover:border-orange-300/70 transition-all shadow-sm hover:shadow-md text-foreground"
+                  className="text-left text-sm p-3 rounded-lg border border-orange-200/60 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-gray-700 hover:border-orange-300/70 dark:hover:border-gray-600 transition-all shadow-sm hover:shadow-md text-foreground"
                 >
                   {query.text}
                 </button>
@@ -111,7 +111,7 @@ export function MessageList({ messages, isLoading = false }: MessageListProps) {
                   "p-3 sm:p-4 transition-all",
                   message.role === "user"
                     ? "bg-primary text-primary-foreground max-w-[90%] sm:max-w-[80%] shadow-sm shadow-blue-200/30"
-                    : "bg-white max-w-[90%] sm:max-w-[80%] shadow-sm shadow-gray-200/50 border border-orange-200/50",
+                    : "bg-white dark:bg-gray-800 max-w-[90%] sm:max-w-[80%] shadow-sm shadow-gray-200/50 dark:shadow-black/30 border border-orange-200/50 dark:border-gray-700",
                   "rounded-2xl",
                   "hover:shadow-md hover:shadow-blue-100/40"
                 )}
