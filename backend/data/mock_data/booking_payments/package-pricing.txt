@@ -1,0 +1,64 @@
+#agent_type: booking_payments
+#document_type: pricing_info
+#last_updated: 2024-01-15
+
+TRAVEL PACKAGE PRICING GUIDE
+
+Standard pricing structure for our travel packages (prices in USD, per person based on double occupancy).
+
+EUROPEAN PACKAGES
+- Paris 5-Day Package: $1,299 - $1,899
+  * Economy flights, 3-star hotel, breakfast included
+  * Mid-range: $1,599 with 4-star hotel
+  * Premium: $1,899 with 5-star hotel, airport transfers
+  
+- London 5-Day Package: $1,199 - $1,799
+  * Similar inclusions to Paris packages
+  * Peak season (June-August): +$200-300
+
+- Multi-City Europe (7 days): $2,499 - $3,499
+  * Visit 2-3 cities (e.g., Paris, Amsterdam, Berlin)
+  * Includes intercity train/flight transportation
+  * Higher-end hotels: $3,499
+
+ASIA PACKAGES
+- Tokyo 7-Day Package: $1,899 - $2,799
+  * Economy flights from West Coast USA
+  * Hotel near major train station
+  * Includes Japan Rail Pass (7-day)
+
+- Bangkok & Phuket 10-Day Package: $1,499 - $2,299
+  * Excellent value destination
+  * Includes domestic flight Bangkok-Phuket
+  * Beach resort accommodation in Phuket
+
+NORTH AMERICA PACKAGES
+- New York City 4-Day Package: $899 - $1,499
+  * Hotel in Manhattan or nearby
+  * Peak season (summer, holidays): +$300-500
+  
+- California Coast (San Francisco, Los Angeles): $1,299 - $1,899
+  * 7-day itinerary
+  * Includes rental car
+
+ADD-ONS AND UPGRADES
+- Travel Insurance: $49-199 (based on trip value)
+- Airport Lounge Access: $39 per person
+- Premium Economy Upgrade: +$400-800
+- Business Class Upgrade: +$2,000-5,000
+- Room Upgrades: +$50-200 per night
+- Guided Tours: $75-300 per tour
+- Meal Plans: $25-75 per day
+
+CHILD PRICING
+- Children under 2: Free (lap infant on flights)
+- Children 2-11: 75% of adult price
+- Children 12+: Full adult price
+
+GROUP DISCOUNTS
+- Groups of 4-7: 5% discount
+- Groups of 8-15: 10% discount
+- Groups of 16+: 15% discount + custom itinerary
+
+All prices subject to change based on availability, season, and airline pricing. Final pricing confirmed at time of booking.
+

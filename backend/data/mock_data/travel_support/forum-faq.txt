@@ -1,0 +1,38 @@
+#agent_type: travel_support
+#document_type: forum_faq
+#last_updated: 2024-01-20
+
+TRAVEL AGENCY FREQUENTLY ASKED QUESTIONS
+
+Compiled from customer forum posts and common inquiries.
+
+Q: How far in advance should I book my trip?
+A: For peak season travel (summer, holidays), we recommend booking 3-6 months in advance. For off-peak travel, 4-8 weeks is usually sufficient. International flights often have better pricing when booked 2-3 months ahead.
+
+Q: What documents do I need for international travel?
+A: A valid passport (with at least 6 months validity remaining) is required. Some countries require visas - check requirements for your destination. We can assist with visa application guidance.
+
+Q: Can I modify or cancel my booking?
+A: Yes, modifications and cancellations are possible but terms vary by booking type and timing. See our cancellation policy for specific details. Changes may incur fees depending on when the request is made relative to travel dates.
+
+Q: What's included in a package deal?
+A: Our standard packages include round-trip flights, hotel accommodation (usually 3-4 star), and airport transfers. Optional add-ons include travel insurance, tours, and meal plans. Check your specific package details for inclusions.
+
+Q: Do you offer travel insurance?
+A: Yes, we strongly recommend travel insurance for all trips. Our insurance covers trip cancellation, medical emergencies, baggage loss, and travel delays. Premium varies by trip cost and destination.
+
+Q: What if my flight is delayed or cancelled?
+A: We monitor flights and will automatically rebook you on the next available flight if yours is cancelled. For significant delays, we'll notify you and assist with rebooking. Travel insurance can provide additional coverage for expenses incurred.
+
+Q: Can I request specific seat assignments?
+A: Yes, seat selection is available during booking or up to 24 hours before departure. Some airlines charge fees for preferred seats (exit rows, extra legroom). Standard seats are typically free but assigned at check-in.
+
+Q: What about dietary restrictions or special needs?
+A: Please inform us during booking about any dietary restrictions, mobility needs, or other special requirements. We'll coordinate with airlines and hotels to accommodate your needs. Advance notice (at least 48 hours) is required.
+
+Q: How do I stay connected while traveling?
+A: Options include international roaming (check with your carrier), local SIM cards, or portable Wi-Fi devices. Many hotels and cafes offer free Wi-Fi. We can help you arrange connectivity solutions.
+
+Q: What's your refund policy?
+A: Refunds depend on your booking type and cancellation timing. Non-refundable bookings cannot be refunded. Refundable bookings follow our standard refund schedule. See our terms and conditions for complete details.
+

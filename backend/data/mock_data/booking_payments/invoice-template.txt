@@ -1,0 +1,74 @@
+#agent_type: booking_payments
+#document_type: invoice_template
+#last_updated: 2024-01-17
+
+INVOICE INFORMATION
+
+Your booking invoice includes the following details and breakdown:
+
+INVOICE HEADER
+- Invoice number (unique booking reference)
+- Invoice date
+- Booking date
+- Travel dates
+- Customer name and contact information
+- Booking reference number
+
+ITEMIZED CHARGES
+1. Base Package Price
+   - Flight cost (per person)
+   - Hotel accommodation (per room, per night)
+   - Package type (economy, mid-range, premium)
+
+2. Room/Seat Upgrades
+   - Room category upgrades
+   - Seat selection fees
+   - Early check-in/late check-out fees
+
+3. Add-Ons
+   - Travel insurance premium
+   - Airport transfers
+   - Guided tours
+   - Meal plans
+   - Airport lounge access
+
+4. Taxes and Fees
+   - Government taxes (airport, departure taxes)
+   - Hotel city taxes
+   - Service fees
+   - Processing fees (if applicable)
+
+5. Discounts Applied
+   - Early booking discounts
+   - Group discounts
+   - Promotional codes
+   - Loyalty program discounts
+
+TOTAL BREAKDOWN
+- Subtotal (before taxes and fees)
+- Taxes and fees total
+- Discounts total
+- Final total amount due
+
+PAYMENT INFORMATION
+- Amount paid to date
+- Amount remaining
+- Payment due date
+- Payment method(s) used
+
+TERMS AND CONDITIONS
+- Cancellation policy reference
+- Refund policy reference
+- Terms of service acknowledgment
+
+DOCUMENTATION
+Your invoice serves as:
+- Booking confirmation
+- Payment receipt (when fully paid)
+- Proof of purchase for travel insurance
+- Reference for modifications or cancellations
+
+Invoice is automatically generated upon booking confirmation and sent via email. Additional copies available upon request through customer portal or by contacting billing department.
+
+All amounts in USD unless otherwise specified. International customers will see equivalent amounts in local currency.
+

@@ -1,0 +1,60 @@
+#agent_type: booking_payments
+#document_type: payment_info
+#last_updated: 2024-01-16
+
+ACCEPTED PAYMENT METHODS
+
+We accept the following payment methods for your booking:
+
+CREDIT AND DEBIT CARDS
+- Visa (all types)
+- Mastercard
+- American Express
+- Discover
+- Diners Club
+
+All card payments are processed securely through encrypted payment gateways. International customers may see charges in local currency converted from USD.
+
+PAYMENT PLAN OPTIONS
+For packages over $1,500, we offer payment plans:
+
+- 50% at booking, 50% 30 days before travel
+- 33% at booking, 33% at 45 days, 34% at 30 days before travel
+- Custom payment plans available for packages over $3,000
+
+Final payment is typically due 30 days before departure. Failure to pay may result in cancellation.
+
+PAYPAL
+PayPal payments accepted for full booking amounts or partial payments. PayPal account must be verified.
+
+WIRE TRANSFERS
+Wire transfers accepted for large bookings (typically $5,000+). Allow 3-5 business days for processing. Instructions provided upon request.
+
+BANK TRANSFERS
+Domestic bank transfers accepted with 3-5 business day processing time. Contact customer service for account details.
+
+CURRENCY
+All prices displayed in USD. International customers will see converted amounts based on current exchange rates. Exchange rate locked at time of booking confirmation.
+
+SECURITY
+All payment information is encrypted and stored securely. We comply with PCI DSS standards for payment card security. We never store complete credit card numbers on our servers.
+
+REFUND PROCESSING
+Refunds, when applicable per our cancellation policy, are processed to the original payment method:
+- Credit/Debit cards: 5-10 business days
+- PayPal: 3-5 business days
+- Wire transfers: 7-14 business days
+
+If original payment method is unavailable, we'll contact you for alternative refund method.
+
+FEES
+- No booking fees for standard payments
+- International transaction fees may apply (charged by your bank, not us)
+- Wire transfer fees: $25-50 (sender responsibility)
+- Payment plan fees: None (standard plans)
+
+CONTACT
+For payment questions or special payment arrangements, contact our billing department:
+Email: billing@travelagency.com
+Phone: 1-800-XXX-XXXX (Monday-Friday, 9am-5pm EST)
+

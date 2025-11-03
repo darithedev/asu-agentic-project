@@ -1,0 +1,93 @@
+#agent_type: policy
+#document_type: baggage_policy
+#last_updated: 2024-01-11
+#effective_date: 2024-01-01
+
+BAGGAGE POLICY
+
+AIRLINE BAGGAGE ALLOWANCES
+
+Standard allowances vary by airline and fare class. General guidelines:
+
+CARRY-ON BAGGAGE
+- Typically: 1 carry-on bag + 1 personal item
+- Size limits: 22" x 14" x 9" (varies by airline)
+- Weight limit: 15-22 lbs (varies by airline)
+- Personal item: purse, laptop bag, small backpack
+
+CHECKED BAGGAGE
+- Economy: Typically 0-1 bag included (varies by airline and route)
+- Premium Economy: 1-2 bags included
+- Business/First Class: 2 bags included
+- Weight limit per bag: 50 lbs (23 kg) standard
+- Size limit: 62 linear inches (length + width + height)
+
+OVERWEIGHT/OVERSIZED FEES
+- Overweight (50-70 lbs): $100-200 per bag
+- Overweight (70+ lbs): $200-400 per bag (may be refused)
+- Oversized (62-80 linear inches): $100-200 per bag
+- Oversized (80+ linear inches): May be refused or charged $200-400
+
+ADDITIONAL BAGGAGE
+- First checked bag (if not included): $35-75
+- Second checked bag: $45-100
+- Third+ checked bag: $150-200 each
+
+SPECIAL ITEMS
+- Sports equipment (golf clubs, skis): $50-150 each
+- Musical instruments: Varies, may require separate seat
+- Fragile items: Special handling fees may apply
+
+RESTRICTED ITEMS
+
+Prohibited in carry-on or checked:
+- Explosives, flammable items
+- Weapons, sharp objects (in carry-on)
+- Liquids over 3.4 oz (in carry-on)
+- Certain batteries (check airline policy)
+
+HOTEL BAGGAGE
+
+Most hotels:
+- Can store luggage before check-in/after check-out (free or minimal fee)
+- Liability for stored luggage typically limited
+- Valuables should not be left in stored luggage
+
+LOST OR DAMAGED BAGGAGE
+
+If baggage is lost or damaged:
+1. File report with airline immediately (before leaving airport)
+2. Obtain written report/reference number
+3. Keep all receipts for replacement items
+4. File claim with airline (deadline typically 7-21 days)
+5. Contact travel insurance if you have baggage coverage
+
+Airline liability typically limited to:
+- Domestic: $3,500 per passenger
+- International: Approximately $1,700 (varies by convention)
+
+Travel insurance may provide additional coverage.
+
+PACKING TIPS
+
+- Pack essentials and medications in carry-on
+- Label all bags with contact information
+- Take photos of bag contents for insurance claims
+- Don't pack valuables in checked baggage
+- Check airline website for specific restrictions
+
+SPECIAL ASSISTANCE
+
+For travelers with mobility needs or medical equipment:
+- Contact airline in advance (typically 48+ hours)
+- Medical equipment typically allowed in addition to standard allowance
+- Wheelchairs and mobility aids usually free
+
+QUESTIONS
+
+Contact us for baggage questions:
+Email: support@travelagency.com
+Phone: 1-800-XXX-XXXX
+
+Baggage policies are set by airlines, not by our agency. We can assist with information but final decisions rest with airline operators. Check your specific airline's website for most current policies.
+

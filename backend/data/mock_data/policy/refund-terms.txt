@@ -1,0 +1,72 @@
+#agent_type: policy
+#document_type: refund_policy
+#last_updated: 2024-01-16
+#effective_date: 2024-01-01
+
+REFUND TERMS AND CONDITIONS
+
+COMPLETE REFUNDS
+
+You are eligible for a complete refund (minus processing fees) if:
+1. You cancel within the full refund period (60+ days before departure)
+2. We cancel your booking due to our error or inability to provide services
+3. Significant changes are made to your booking that you did not approve
+4. Documented medical emergency prevents travel (case-by-case review)
+
+PARTIAL REFUNDS
+
+Partial refunds are available based on cancellation timing (see Cancellation Policy). Refund percentages decrease as departure date approaches.
+
+NON-REFUNDABLE ITEMS
+
+The following are generally non-refundable once booked:
+- Non-refundable airline tickets
+- Processing fees ($100 per person)
+- Travel insurance premiums (may be transferable)
+- Certain hotel bookings marked as non-refundable
+
+REFUND PROCESSING TIME
+
+Once cancellation is confirmed:
+- Refund processing begins within 2 business days
+- Credit card refunds: 5-10 business days to appear on statement
+- PayPal refunds: 3-5 business days
+- Bank/wire transfers: 7-14 business days
+
+Refund timing also depends on your financial institution's processing time.
+
+DISPUTED CHARGES
+
+If you believe you've been incorrectly charged:
+1. Contact customer service within 30 days of charge
+2. Provide booking reference and explanation
+3. We'll review and respond within 10 business days
+4. If valid, refund will be processed per standard timeline
+
+CHARGEBACKS
+
+We strongly encourage contacting us directly to resolve billing issues before initiating chargebacks. Chargebacks may result in account restrictions. We're committed to resolving all issues fairly.
+
+REFUND METHOD
+
+Refunds are issued to the original payment method used for booking:
+- If original payment method is no longer valid, contact us for alternative arrangement
+- Refunds cannot be issued to different credit cards or accounts without verification
+
+SPECIAL PROMOTIONS
+
+Refund terms for promotional bookings (flash sales, limited-time offers) may differ. Terms clearly stated at time of booking for promotional rates.
+
+GROUP BOOKINGS
+
+Refund terms for group bookings outlined in separate group agreement contract.
+
+QUESTIONS ABOUT REFUNDS
+
+Contact our billing department:
+Email: refunds@travelagency.com
+Phone: 1-800-XXX-XXXX
+Hours: Monday-Friday, 9am-5pm EST
+
+All refund requests subject to verification and review. This policy supplements our standard Terms of Service.
+

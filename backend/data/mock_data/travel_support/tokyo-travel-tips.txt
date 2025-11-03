@@ -1,0 +1,37 @@
+#agent_type: travel_support
+#document_type: travel_tips
+#destination: Tokyo, Japan
+#last_updated: 2024-01-10
+
+TOKYO TRAVEL TIPS
+
+Essential tips for navigating and enjoying Tokyo, Japan's vibrant capital city.
+
+CURRENCY AND PAYMENTS
+Japan is primarily a cash-based society. While credit cards are accepted in major establishments, always carry yen for smaller shops, restaurants, and vending machines. ATMs at convenience stores (7-Eleven, FamilyMart) accept international cards.
+
+TRANSPORTATION
+Purchase a Japan Rail Pass before arriving (for tourists only). Within Tokyo, the subway system is extensive. Get a Pasmo or Suica card for easy tap-and-go access. Rush hour (7-9am, 5-7pm) on trains can be extremely crowded - avoid if possible.
+
+CULTURAL ETIQUETTE
+- Bowing is a common greeting
+- Remove shoes when entering homes, temples, and some restaurants
+- Speak quietly in public spaces
+- Tipping is not customary and can be considered rude
+- Business cards are exchanged with both hands
+
+ACCOMMODATION
+Consider staying near major train stations (Shinjuku, Shibuya, Ginza) for convenience. Capsule hotels offer a unique Japanese experience for budget travelers. Traditional ryokans provide cultural immersion but book well in advance.
+
+FOOD AND DINING
+Tokyo has more Michelin-starred restaurants than any other city. Don't miss sushi at Tsukiji Outer Market, ramen shops, and izakayas (Japanese pubs). Many restaurants have ticket machines for ordering - study the pictures if you don't read Japanese.
+
+SHOPPING
+Electronics in Akihabara, fashion in Harajuku, traditional goods in Asakusa. Tax-free shopping available for tourists (show passport) at designated stores. Many stores offer tax refunds at the airport.
+
+WI-FI AND CONNECTIVITY
+Free Wi-Fi is available but can be unreliable. Consider renting a pocket Wi-Fi device or purchasing a SIM card for your phone. Essential for navigating with Google Maps.
+
+LANGUAGE
+While English signage is common in tourist areas, learning a few Japanese phrases (sumimasen for excuse me, arigatou for thank you) goes a long way. Translation apps are very helpful.
+
