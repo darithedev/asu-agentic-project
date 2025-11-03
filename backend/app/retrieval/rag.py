@@ -77,7 +77,7 @@ class RAGRetriever:
             results = self.collection.query(
                 query_embeddings=[query_embedding],
                 n_results=top_k,
-                where=where_clause if where_clause else None,
+                where=where_clause,
             )
             
             # Format results
