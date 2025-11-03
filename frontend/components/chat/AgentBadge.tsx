@@ -13,20 +13,20 @@ export function AgentBadge({ agentType, className }: AgentBadgeProps) {
     travel_support: {
       label: "Travel Support",
       icon: MapPin,
-      colorClass: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
+      colorClass: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200/50",
       iconColorClass: "text-blue-600 dark:text-blue-400",
     },
     booking_payments: {
       label: "Booking & Payments",
       icon: CreditCard,
-      colorClass: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
-      iconColorClass: "text-green-600 dark:text-green-400",
+      colorClass: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-200/50",
+      iconColorClass: "text-emerald-600 dark:text-emerald-400",
     },
     policy: {
       label: "Policy",
       icon: Shield,
-      colorClass: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400",
-      iconColorClass: "text-purple-600 dark:text-purple-400",
+      colorClass: "bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400 border border-violet-200/50",
+      iconColorClass: "text-violet-600 dark:text-violet-400",
     },
   };
 

@@ -143,9 +143,12 @@ export function ChatInterface() {
       "flex flex-col w-full mx-auto",
       "h-screen sm:h-[600px] md:min-h-[600px] md:max-h-[800px]",
       "max-w-4xl",
-      "rounded-lg sm:rounded-xl shadow-lg"
+      "rounded-lg sm:rounded-xl",
+      "shadow-xl shadow-blue-100/50",
+      "border border-orange-200/60",
+      "bg-white"
     )}>
-      <div className="flex items-center justify-between p-3 sm:p-4 border-b bg-muted/30">
+      <div className="flex items-center justify-between p-3 sm:p-4 border-b border-orange-200/60 bg-gradient-to-r from-blue-50/30 to-white">
         <div className="flex-1 min-w-0">
           <h1 className="text-lg sm:text-xl font-semibold truncate">
             Travel Agency Customer Service
